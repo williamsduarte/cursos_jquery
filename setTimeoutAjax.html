@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title></title>
+    <meta charset="utf-8">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+
+</head>
+<body>
+
+<ul id="lista">
+    <li id="">Linha 1</li>
+    <li id="">Linha 2</li>
+    <li id="">Linha 3</li>
+    <li id="">Linha 4</li>
+</ul>
+
+</body>
+
+
+<script type="application/javascript">
+
+    iniciarSuporte();
+
+    function iniciarSuporte() {
+        setTimeout(getSuporte, 2000);
+    }
+
+
+    function getSuporte() {
+
+        $.ajax({
+            url: 'ajax.php?id=1',
+            dataType: 'json',
+            success: function (json) {
+
+                $("#lista").append("<li>"+ json.nome +"</li>");
+                setTimeout(getSuporte, 2000);
+
+
+            },
+            error:function () {
+                setTimeout(getSuporte, 2000);
+            }
+
+        });
+
+
+
+
+    };
+
+
+
+
+//
+//    $("document").ready(function () {
+//
+//        //	$("#lista").append("<li> LOJA <li>");
+//    });
+
+</script>
+</html>

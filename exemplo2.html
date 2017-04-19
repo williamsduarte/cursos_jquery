@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<meta charset="utf-8">
+
+	 <script src="js/jquery-3.2.1.min.js"></script>
+
+
+</head>
+<body>
+
+	<div class="teste">Assssssssssss</div>
+	<div class="teste">Assssssssssss</div>
+	<div class="teste">Assssssssssss</div>
+
+	<input type="button" id="teste" value="exemplo1">
+	<input type="text" id="data" value="exemplo1">
+
+</body>
+
+
+<script type="application/javascript">
+
+	jQuery(function () {
+
+	    $("#teste").on("click", function () {
+            $('.teste:first').css('border', "10px solid red");
+            $('.teste:first').css('margin', "100px");
+        });
+
+	    $("#data").datepick
+
+
+
+    });
+
+
+
+</script>
+</html>
